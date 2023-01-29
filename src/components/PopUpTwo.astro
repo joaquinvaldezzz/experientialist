@@ -1,0 +1,87 @@
+<div class="absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2">
+  <div
+    class="relative grid max-w-screen-md grid-cols-1 overflow-hidden bg-white md:mx-auto md:grid-cols-2"
+    id="pop-up"
+  >
+    <button class="absolute top-4 right-4 z-10 rounded-sm bg-white" id="close-button" type="button">
+      <svg
+        class="h-6 w-6"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
+
+    <div class="relative">
+      <img
+        class="md:h-full md:object-cover md:object-center"
+        src="/images/image-pop-up-2.jpg"
+        alt=""
+      />
+    </div>
+
+    <div class="p-8">
+      <h2 class="mb-6 text-2xl font-bold">Promo!</h2>
+      <p class="mb-8 text-gray-600">
+        Get a <span class="uppercase">free</span> excursion on your next great adventure when you book
+        before December 31st for travel in 2023!
+      </p>
+
+      <form class="mb-6" action="">
+        <input
+          class="mb-3 block w-full border px-4 py-3 text-sm"
+          type="email"
+          placeholder="Email address"
+        />
+        <button
+          class="block w-full bg-secondary-500 px-4 py-3 text-sm font-medium uppercase tracking-wide text-white"
+          type="submit"
+        >
+          Book now
+        </button>
+      </form>
+
+      <p class="mb-4 text-sm text-gray-500">
+        Excursion is limited to availability, and from select options provided by your agent, 2 PAX
+        per $8,000 CAD spent
+      </p>
+
+      <p class="mb-6 text-sm text-gray-500">Only valid bookings over $8,000 CAD</p>
+
+      <div>
+        <!-- Insert reCAPTCHA here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const popUp = document.getElementById('pop-up')
+  const closeButton = document.getElementById('close-button')
+
+  // Checks if the pop-up exists
+  if (popUp) {
+    // Checks if the close button exists
+    if (closeButton) {
+      closeButton.addEventListener('click', () => {
+        popUp.classList.remove('grid')
+        popUp.classList.add('hidden')
+
+        // Shows the pop-up after 2 seconds
+        setTimeout(() => {
+          popUp.classList.remove('hidden')
+          popUp.classList.add('grid')
+        }, 2000)
+      })
+    } else {
+      console.error('The close button does not exist.')
+    }
+  } else {
+    console.error('The pop-up element does not exist.')
+  }
+</script>

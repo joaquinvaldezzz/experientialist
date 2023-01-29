@@ -1,0 +1,53 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "astro build",
+    "dev": "astro dev",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "preview": "astro preview"
+  },
+  "browserslist": {
+    "development": [
+      "> 0.5%"
+    ],
+    "production": [
+      ">= 1%",
+      "last 1 major version",
+      "not dead",
+      "Chrome >= 45",
+      "Firefox >= 38",
+      "Edge >= 12",
+      "Explorer >= 10",
+      "iOS >= 9",
+      "Safari >= 9",
+      "Android >= 4.4",
+      "Opera >= 30"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.1",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "astro": "^1.9.2",
+    "autoprefixer": "^10.4.13",
+    "axios": "^1.2.3",
+    "json-server": "^0.17.1",
+    "swiper": "^8.4.6",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "@prettier/plugin-xml": "^2.2.0",
+    "eslint": "^8.32.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "postcss": "^8.4.21",
+    "postcss-import": "^15.1.0",
+    "postcss-sort-media-queries": "^4.3.0",
+    "prettier": "^2.8.3",
+    "prettier-plugin-astro": "^0.7.2",
+    "prettier-plugin-tailwindcss": "^0.2.1"
+  }
+}

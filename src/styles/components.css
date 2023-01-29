@@ -1,0 +1,59 @@
+@import 'tailwindcss/components';
+@import 'components/header.css';
+@import 'components/modal.css';
+
+.logotype-line {
+  position: relative;
+  display: inline-block;
+}
+
+.logotype-line::after {
+  position: absolute;
+  top: theme('inset.1/2');
+  left: calc(100% + 1rem);
+  content: '';
+  width: theme('width.screen');
+  height: theme('height[0.5]');
+  background-color: theme('colors.secondary.400');
+  transform: translateY(-50%);
+}
+
+.heading-line-1,
+.heading-line-2 {
+  position: relative;
+}
+
+.heading-line-1::after,
+.heading-line-2::after {
+  position: absolute;
+  top: theme('inset.1/2');
+  left: 0;
+  content: '';
+  width: theme('width.full');
+  height: theme('height.1');
+  background-color: theme('colors.primary.200');
+  transform: translateY(-50%);
+}
+
+.img-bg {
+  position: relative;
+}
+
+.img-bg::after {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  content: '';
+  width: theme('width.full');
+  height: theme('height.3/4');
+  border-radius: theme('borderRadius.DEFAULT');
+  background-color: theme('colors.primary.50');
+}
+
+@screen lg {
+  .heading-line-1::after {
+    left: theme('inset.1/2');
+    width: theme('width.screen');
+    transform: translate(-50%, 0) rotate(90deg);
+  }
+}

@@ -1,0 +1,12 @@
+@import 'tailwindcss/utilities';
+
+.bg-beach {
+  background-image: linear-gradient(rgb(11 37 44 / 0.5), rgb(11 37 44 / 0.5)),
+    url('/images/jcob-nasyr-hZPYwYR02Yo-unsplash.jpg');
+}
+
+@screen md {
+  .bg-beach {
+    background-image: url('/images/jcob-nasyr-hZPYwYR02Yo-unsplash.jpg');
+  }
+}

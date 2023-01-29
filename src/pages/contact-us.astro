@@ -1,0 +1,96 @@
+---
+import MainLayout from '~layouts/MainLayout.astro'
+---
+
+<MainLayout title="Contact us">
+  <form class="mx-auto grid max-w-screen-sm grid-cols-1 gap-8 px-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <label>
+        <div class="mb-2 text-sm font-semibold">
+          First name <span class="text-danger-300">*</span>
+        </div>
+        <input
+          class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+          type="text"
+        />
+      </label>
+
+      <label>
+        <div class="mb-2 text-sm font-semibold">
+          Last name <span class="text-danger-300">*</span>
+        </div>
+        <input
+          class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+          type="text"
+        />
+      </label>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <label>
+        <div class="mb-2 text-sm font-semibold">
+          Email address <span class="text-danger-300">*</span>
+        </div>
+        <input
+          class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+          type="email"
+        />
+      </label>
+
+      <label>
+        <div class="mb-2 text-sm font-semibold">Phone number</div>
+        <input
+          class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+          type="text"
+        />
+      </label>
+    </div>
+
+    <label>
+      <div class="mb-2 text-sm font-semibold">
+        Where would you like to go? <span class="text-danger-300">*</span>
+      </div>
+      <input
+        class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+        type="text"
+        placeholder="e.g. New York, USA"
+      />
+    </label>
+
+    <label>
+      <div class="mb-2 text-sm font-semibold">When would you like to depart?</div>
+      <input
+        class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+        type="date"
+      />
+    </label>
+
+    <label>
+      <div class="mb-2 text-sm font-semibold">When would you like to return?</div>
+      <input
+        class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+        type="date"
+      />
+    </label>
+
+    <!-- Are your dates flexible? -->
+
+    <label>
+      <div class="mb-2 text-sm font-semibold">
+        Number of travelers <span class="text-danger-300">*</span>
+      </div>
+      <input
+        class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+        type="number"
+      />
+    </label>
+
+    <label>
+      <div class="mb-2 text-sm font-semibold">When would you like to depart?</div>
+      <input
+        class="block h-10 w-full rounded border px-3 py-2 focus:border-primary-300 focus:outline-none focus:ring-4 focus:ring-primary-50"
+        type="text"
+      />
+    </label>
+  </form>
+</MainLayout>

@@ -1,0 +1,28 @@
+{
+  "emails": [
+    {
+      "email": "stef@test.com",
+      "id": 1
+    },
+    {
+      "email": "steffy@lidres.com",
+      "id": 2
+    },
+    {
+      "email": "steflidres@gmail.com",
+      "id": 3
+    },
+    {
+      "email": "dasd@das.com",
+      "id": 4
+    },
+    {
+      "email": "dasd@dsadcom",
+      "id": 5
+    },
+    {
+      "email": "dsad@das.com",
+      "id": 6
+    }
+  ]
+}
