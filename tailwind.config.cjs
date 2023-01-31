@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 const aspectRatio = require('@tailwindcss/aspect-ratio')
 const lineClamp = require('@tailwindcss/line-clamp')
-const files = require('./files')
+const files = require('./files.cjs')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
