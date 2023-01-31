@@ -2,7 +2,7 @@
 
 This repository contains the staging site for the Experientialist that uses [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/). To develop locally, follow the instructions below.
 
-Pushes to the `main` branch will automatically deploy to the staging site at [https://experientialist-staging.netlify.app](https://experientialist-staging.netlify.app/).
+Committed changes to the `main` branch will automatically deploy to the staging site at [https://experientialist-staging.netlify.app](https://experientialist-staging.netlify.app/).
 
 ## Local Setup
 
