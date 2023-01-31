@@ -15,12 +15,3 @@
   src: url('/fonts/Inter-italic.var.woff2') format('woff2');
   font-display: swap;
 }
-
-@font-face {
-  font-weight: 700;
-  font-family: 'Old Standard TT';
-  font-style: normal;
-  src: url('/fonts/OldStandardTT-Bold.woff') format('woff'),
-    url('/fonts/OldStandardTT-Bold.woff2') format('woff2');
-  font-display: swap;
-}
