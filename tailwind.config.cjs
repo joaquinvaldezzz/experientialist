@@ -1,7 +1,6 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+/* eslint-disable global-require */
+const { fontFamily } = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
-const aspectRatio = require('@tailwindcss/aspect-ratio')
-const lineClamp = require('@tailwindcss/line-clamp')
 const files = require('./files.cjs')
 
 /** @type {import('tailwindcss').Config} */
@@ -76,7 +75,8 @@ module.exports = {
         'top-16': 'center top -16rem',
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter var', ...fontFamily.sans],
+        serif: ['Boska', ...fontFamily.serif],
         display: ['Old Standard TT', 'system-ui'],
       },
       minWidth: {
@@ -101,7 +101,6 @@ module.exports = {
 
       addVariant('supports-backdrop-blur', '@supports (backdrop-filter: blur(0))')
     }),
-    aspectRatio,
-    lineClamp,
+    require('@tailwindcss/aspect-ratio'),
   ],
 }
