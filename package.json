@@ -28,7 +28,6 @@
   },
   "dependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.2",
-    "@tailwindcss/line-clamp": "^0.4.2",
     "astro": "^2.0.4",
     "autoprefixer": "^10.4.13",
     "swiper": "^8.4.7",
