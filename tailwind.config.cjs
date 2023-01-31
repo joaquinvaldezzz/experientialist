@@ -76,8 +76,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter var', ...fontFamily.sans],
-        serif: ['Boska', ...fontFamily.serif],
-        display: ['Old Standard TT', 'system-ui'],
+        serif: ['Old Standard TT', ...fontFamily.serif],
       },
       minWidth: {
         xs: '320px',
