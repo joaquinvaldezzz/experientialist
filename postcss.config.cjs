@@ -1,4 +1,4 @@
-const files = require('./files')
+const files = require('./files.cjs')
 
 module.exports = {
   plugins: {
