@@ -1,4 +1,6 @@
 import { defineConfig } from 'astro/config'
+// eslint-disable-next-line import/no-unresolved
+import mdx from '@astrojs/mdx'
 
 export default defineConfig({
   build: {
@@ -8,6 +10,7 @@ export default defineConfig({
     host: true,
     port: 8080,
   },
+  integrations: [mdx()],
   vite: {
     build: {
       rollupOptions: {
