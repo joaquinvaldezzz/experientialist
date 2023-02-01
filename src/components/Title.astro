@@ -1,14 +1,32 @@
 ---
 export interface Props {
+  image?: string
   title: string
   prefix?: string
   suffix?: string
+  description?: string
 }
 
-const { title, prefix, suffix } = Astro.props as Props
+const { image, title, prefix, suffix, description } = Astro.props as Props
 const result = prefix ? ` ${prefix} - ${title}` : suffix ? `${title} - ${suffix}` : title
 ---
 
 <title>{result}</title>
-<meta property="og:title" content={result} />
+<meta name="description" content={description} />
+<meta name="keywords" content="" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={result} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:site" content="" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image" content={image} />
+
+<!-- Open Graph general (Facebook, Pinterest)-->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content="" />
+<meta property="og:site_name" content="undefined" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content={image} />
