@@ -29,14 +29,20 @@ const { frontmatter } = Astro.props
   </head>
 
   <body class="min-w-xs antialiased">
-    <div class="prose mx-auto px-4 py-4">
-      <slot />
-
-      <div class="not-prose my-8 flex items-center space-x-4">
-        <hr class="grow" />
-        <div class="h-6 w-6 rounded-full bg-primary-200"></div>
-        <hr class="grow" />
+    <header class="mx-auto max-w-screen-lg px-4 py-4 lg:py-8">
+      <div class="aspect-h-9 aspect-w-16">
+        <img class="object-cover object-center" src={frontmatter.image} alt={frontmatter.title} />
       </div>
+    </header>
+
+    <main class="prose mx-auto px-4 py-4">
+      <slot />
+    </main>
+
+    <div class="mx-auto my-8 flex max-w-screen-md items-center space-x-4 px-4">
+      <hr class="grow" />
+      <div class="h-6 w-6 rounded-full bg-primary-200"></div>
+      <hr class="grow" />
     </div>
   </body>
 </html>
