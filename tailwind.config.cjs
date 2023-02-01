@@ -1,6 +1,5 @@
 /* eslint-disable global-require */
 const { fontFamily } = require('tailwindcss/defaultTheme')
-const plugin = require('tailwindcss/plugin')
 const files = require('./files.cjs')
 
 const preferredStyles = {
@@ -115,20 +114,5 @@ module.exports = {
     aspectRatio: false,
     content: false,
   },
-  plugins: [
-    plugin(({ addUtilities, addVariant }) => {
-      addUtilities({
-        '.writing-rl': {
-          'writing-mode': 'vertical-rl',
-        },
-        '.content-none': {
-          content: "''",
-        },
-      })
-
-      addVariant('supports-backdrop-blur', '@supports (backdrop-filter: blur(0))')
-    }),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/aspect-ratio')],
 }
