@@ -1,0 +1,30 @@
+---
+import Title from '~/components/Title.astro'
+import '~/styles/main.css'
+
+export interface PageProps {
+  frontmatter: {
+    title: string
+    prefix?: string
+    suffix?: string
+  }
+}
+
+const { frontmatter } = Astro.props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" />
+    <Title title={frontmatter.title} prefix={frontmatter.prefix} suffix={frontmatter.suffix} />
+  </head>
+
+  <body class="min-w-xs antialiased">
+    <div class="prose mx-auto px-4 py-4">
+      <slot />
+    </div>
+  </body>
+</html>
