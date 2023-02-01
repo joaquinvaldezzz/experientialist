@@ -31,6 +31,12 @@ const { frontmatter } = Astro.props
   <body class="min-w-xs antialiased">
     <div class="prose mx-auto px-4 py-4">
       <slot />
+
+      <div class="not-prose my-8 flex items-center space-x-4">
+        <hr class="grow" />
+        <div class="h-6 w-6 rounded-full bg-primary-200"></div>
+        <hr class="grow" />
+      </div>
     </div>
   </body>
 </html>
