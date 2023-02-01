@@ -3,6 +3,11 @@ const { fontFamily } = require('tailwindcss/defaultTheme')
 const plugin = require('tailwindcss/plugin')
 const files = require('./files.cjs')
 
+const preferredStyles = {
+  letterSpacing: '-0.025em',
+  lineHeight: '1.25',
+}
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [...files],
@@ -80,6 +85,29 @@ module.exports = {
       },
       minWidth: {
         xs: '320px',
+      },
+
+      typography: {
+        DEFAULT: {
+          css: [
+            {
+              h1: {
+                fontWeight: '700',
+                ...preferredStyles,
+              },
+              h2: {
+                ...preferredStyles,
+              },
+              h3: {
+                ...preferredStyles,
+              },
+              li: {
+                marginBottom: '0.25em',
+                marginTop: '0.25em',
+              },
+            },
+          ],
+        },
       },
     },
   },
