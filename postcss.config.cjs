@@ -13,7 +13,14 @@ module.exports = {
       keyframes: true,
       variables: true,
     },
-    cssnano: {},
+    cssnano: {
+      preset: [
+        'default',
+        {
+          cssDeclarationSorter: false,
+        },
+      ],
+    },
     'postcss-import': {},
     'postcss-sort-media-queries': {},
     tailwindcss: {},
