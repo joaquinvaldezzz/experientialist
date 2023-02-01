@@ -100,6 +100,7 @@ module.exports = {
 
       addVariant('supports-backdrop-blur', '@supports (backdrop-filter: blur(0))')
     }),
+    require('@tailwindcss/typography'),
     require('@tailwindcss/aspect-ratio'),
   ],
 }
